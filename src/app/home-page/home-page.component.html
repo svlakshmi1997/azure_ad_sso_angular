@@ -1,0 +1,51 @@
+<div class="container-fluid hdr_bg padd-1rem">
+  <a href="https://bi3technologies.com/" target="_blank">
+    <img src="assets/the_bi3_logo/BI3 ico.ico" alt="BI3 Technologies"></a>
+
+  <button class="btn btn-dark pull-right" (click)="logout()">
+    Logout
+  </button>
+</div>
+<div class="container">
+  <div class="margin-top-4rem">
+    <h3 class="text-center vert-center bi3-blue">
+      Welcome <span *ngIf="displayName!=null">
+        {{ displayName}}!</span>
+    </h3>
+
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-hover table-condensed" style="border: solid #333 1px;">
+      <thead class="thead-dark">
+        <tr>
+          <th> S.No</th>
+          <th> Subscription</th>
+          <th>Subscription Id</th>
+        </tr>
+      </thead>
+      <tbody *ngIf="subscriptionList.length==0">
+        <tr>
+          <td colspan="12">
+            <h6 class="text-center">
+              No Records Found
+            </h6>
+          </td>
+        </tr>
+      </tbody>
+      <tbody *ngIf="subscriptionList.length>0">
+        <tr *ngFor="let subs of subscriptionList ; let i = index">
+          <td>
+            {{i+1}}
+          </td>
+          <td>
+             {{subs.displayName}}
+          </td>
+          <td>
+            {{subs.subscriptionId}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

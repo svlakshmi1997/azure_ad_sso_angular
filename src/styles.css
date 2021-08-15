@@ -1,0 +1,37 @@
+/* Global Styles */
+.vert-center {
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+}
+
+.bi3-blue {
+    color: #146ca9 !important;
+}
+
+:not([class^="fa"]) {
+    font-family: Poppins, sans-serif !important;
+}
+
+body {
+    background-color: #f5f5f5 !important;
+}
+
+.margin-top-8rem {
+    margin-top: 8rem !important;
+}
+
+.margin-top-4rem {
+    margin-top: 4rem !important;
+}
+
+.hdr_bg {
+    background-color: #E6F4F1 !important;
+}
+
+.padd-1rem {
+    padding: 0.5rem !important;
+}
+.pull-right{
+    float: right !important;
+}
